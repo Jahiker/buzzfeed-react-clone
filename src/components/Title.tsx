@@ -1,7 +1,13 @@
-import { TitleProps } from "../types"
+type TitleProps = {
+  title: string;
+  subtitle: string;
+};
 
-export const Title = ({ title, subTitle }: TitleProps) => {
+export const Title = ({ title, subtitle }: TitleProps) => {
   return (
-    <div>{ title }</div>
-  )
-}
+    <div>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
+    </div>
+  );
+};

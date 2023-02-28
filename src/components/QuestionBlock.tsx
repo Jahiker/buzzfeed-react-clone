@@ -1,5 +1,11 @@
+import { Question } from "../types"
 
-export const QuestionBlock = () => {
+type QuestionProps = {
+  question: Question
+}
+
+export const QuestionBlock = ({question}: QuestionProps) => {
+  console.log(question)
   return (
     <div>QuestionBlock</div>
   )

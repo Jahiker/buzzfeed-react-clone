@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Title } from "./components";
+import { Title, QuestionsBlock } from "./components";
+
+import { ContentQuiz } from "./types";
 
 const App = () => {
   const [quiz, setQuiz] = useState<any>(null);
@@ -8,7 +10,7 @@ const App = () => {
     try {
       const response = await fetch("http://localhost:8000/quiz");
       const json = await response.json();
-      console.log("🚀 ~ file: App.tsx:11 ~ fetchData ~ json:", json)
+      // console.log("🚀 ~ file: App.tsx:11 ~ fetchData ~ json:", json)
       setQuiz(json);
     } catch (error) {
       console.error(error);
@@ -20,8 +22,11 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <Title title={quiz?.title} subTitle={quiz?.subTitle} />
+    <div className="app">
+      <Title title={quiz?.title} subtitle={quiz?.subtitle} />
+      {quiz?.content.map((contentItem: ContentQuiz) => (
+        <QuestionsBlock key={contentItem.id} quizItem={contentItem} />
+      ))}
     </div>
   );
 };
