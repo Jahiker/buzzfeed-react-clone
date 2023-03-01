@@ -6,7 +6,7 @@ import { ContentQuiz } from "./types";
 const App = () => {
   const [quiz, setQuiz] = useState<any>(null);
   const [chosenAnswerItem, setChosenAnswerItem] = useState<string[]>([]);
-  const [unanswerQuestionsIs, setUnanswerQuestionsIs] = useState<any[] | null>(null);
+  const [unanswerQuestionsIs, setUnanswerQuestionsIs] = useState<any[]>([]);
 
 
   const fetchData = async (): Promise<void> => {

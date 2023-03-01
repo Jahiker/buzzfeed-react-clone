@@ -6,8 +6,8 @@ type QuestionProps = {
   quizItemId: number;
   setChosenAnswerItem: Dispatch<SetStateAction<string[]>>;
   chosenAnswerItem: string[];
-  setUnanswerQuestionsIs: Dispatch<SetStateAction<any[] | null>>;
-  unanswerQuestionsIs: any[] | null;
+  setUnanswerQuestionsIs: Dispatch<SetStateAction<any[]>>;
+  unanswerQuestionsIs: any[];
 };
 
 export const QuestionBlock = ({
