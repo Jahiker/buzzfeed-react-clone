@@ -15,7 +15,7 @@ body {
 }
 
 .app {
-  width: 600px;
+  width: 37.5rem;
 }
 
 h1 {
@@ -40,7 +40,7 @@ p {
 }
 
 .question-title {
-  width: 600px;
+  width: 37.5rem;
   height: 210px;
   background-color: #6645dd;
   border-radius: 5px;
@@ -78,4 +78,18 @@ p {
 .question-block a {
   color: #999999;
   text-decoration: none;
+}
+
+.answer-block {
+  width: 37.5rem;
+  background-color: #ff3d9e;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.answer-block img {
+  width: 90%;
 }
